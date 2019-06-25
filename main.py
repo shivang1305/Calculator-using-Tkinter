@@ -12,7 +12,7 @@ def Eq():
     global op
     equ=str(eval(op))
     text_input.set(equ)
-    operator=""
+    op=""
 window=Tk()
 window.title("Making a Goddamn Calculator")
 op=""
