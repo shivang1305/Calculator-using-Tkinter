@@ -13,6 +13,30 @@ def Eq():
     equ=str(eval(op))
     text_input.set(equ)
     op=""
+	
+def onclick(event):
+    global k
+    b=event.widget
+    if b==b0 or b==b1 or  b==b2 or b==b3 or b==b4 or b==b5 or b==b6 or b==b7 or b==b8 or b==b9:
+        if k==0:
+            txt.delete(0,"end")
+            txt.insert("end",b.cget("text"))
+            k=1
+            
+        else:
+            txt.insert("end",b.cget("text"))
+            
+    elif b==bplus or b==bminus or b==bmultiply or b==bdivide:
+        k=1
+        op=b
+        op1=txt.get()
+        txt.delete(0,"end")
+        
+    elif b==bequals:
+        op2=txt.get()
+        calc
+		
+		
 window=Tk()
 window.title("Making a Goddamn Calculator")
 op=""
